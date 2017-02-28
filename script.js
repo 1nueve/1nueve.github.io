@@ -46,6 +46,7 @@
                   document.getElementById('email').innerHTML = me.email;
                   var id = me.id;
                   document.getElementById("url").innerHTML = "http://www.facebook.com/" + id 
+                  document.getElementById("url").setAttribute("href", "http://www.facebook.com/" + id );
                   document.getElementById('city').innerHTML = me.location.name;
                  
               }
