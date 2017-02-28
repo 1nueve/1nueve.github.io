@@ -39,9 +39,10 @@
               '/me',
               'GET',
               {"fields":"id,name,email,location"},
-              function(response) {
+              function(me) {
                   // Insert your code here
                   document.getElementById('saludo').innerHTML = me.name;
+                  console.log(me)
               }
             );
           } 
