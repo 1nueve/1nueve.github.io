@@ -46,7 +46,7 @@
  
         //evento para iniciar sesión y pedir los permisos que pasemos en scope
         document.getElementById('login').addEventListener('click', function(){
-         FB.login(function(){}, { scope: 'email,user_birthday,user_location' });
+         FB.login(function(){}, { scope: 'public_profile,email,user_birthday,user_location' });
         });
         //al pulsar en salir cerramos sesión y mandamos al inicio
         document.getElementById('salir').addEventListener('click', function(){
