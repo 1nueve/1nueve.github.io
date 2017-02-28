@@ -33,7 +33,7 @@
             //en nuestro caso redirigimos
             FB.api('/me', function(me){
               if (me.name) {
-
+                var me = me
                  //en vez de redirigir, como la petición es realizada
                  //sin refrescar, podemos hacer cualquier interacción
                  //sin movernos de la página
