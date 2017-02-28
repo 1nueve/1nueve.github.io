@@ -23,16 +23,27 @@
             console.log(response)
             //si el usuario es logueado correctamente hacemos lo que queramos
             //en nuestro caso redirigimos
-            FB.api('/me', function(me){
-              if (me.name) {
-                console.log(me)
-                 //en vez de redirigir, como la petición es realizada
-                 //sin refrescar, podemos hacer cualquier interacción
-                 //sin movernos de la página
-                 //window.location = "http://localhost/jquery/home.html";
-                 document.getElementById('saludo').innerHTML = me.name;
+            // FB.api('/me', function(me){
+            //   if (me.name) {
+            //     console.log(me)
+            //      //en vez de redirigir, como la petición es realizada
+            //      //sin refrescar, podemos hacer cualquier interacción
+            //      //sin movernos de la página
+            //      //window.location = "http://localhost/jquery/home.html";
+            //      document.getElementById('saludo').innerHTML = me.name;
+            //   }
+            // })
+
+
+            FB.api(
+              '/me',
+              'GET',
+              {"fields":"id,name,email,location"},
+              function(response) {
+                  // Insert your code here
+                  document.getElementById('saludo').innerHTML = me.name;
               }
-            })
+            );
           } 
         });
  
