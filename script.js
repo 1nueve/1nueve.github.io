@@ -22,17 +22,6 @@
           if (response.authResponse) {
             console.log(response)
             //si el usuario es logueado correctamente hacemos lo que queramos
-            //en nuestro caso redirigimos
-            // FB.api('/me', function(me){
-            //   if (me.name) {
-            //     console.log(me)
-            //      //en vez de redirigir, como la petición es realizada
-            //      //sin refrescar, podemos hacer cualquier interacción
-            //      //sin movernos de la página
-            //      //window.location = "http://localhost/jquery/home.html";
-            //      document.getElementById('saludo').innerHTML = me.name;
-            //   }
-            // })
 
 
             FB.api(
@@ -61,6 +50,7 @@
         //al pulsar en salir cerramos sesión y mandamos al inicio
         document.getElementById('salir').addEventListener('click', function(){
           FB.logout();
+          location.reload();
         }); 
 
       } 
