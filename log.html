@@ -28,11 +28,12 @@
          //manejador para comprobar si el status del usuario ha cambiado o no 
         FB.Event.subscribe('auth.statusChange', function(response) {
           if (response.authResponse) {
+            console.log(response)
             //si el usuario es logueado correctamente hacemos lo que queramos
             //en nuestro caso redirigimos
             FB.api('/me', function(me){
               if (me.name) {
-                console.log(me)
+
                  //en vez de redirigir, como la petición es realizada
                  //sin refrescar, podemos hacer cualquier interacción
                  //sin movernos de la página
