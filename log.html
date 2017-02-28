@@ -20,9 +20,9 @@
         FB.init({
           appId      : '1635854263389547',// la appid de tu aplicación facebook
           status   : true,
-      cookie   : true,
-      xfbml    : true,
-      oauth    : true // habilita oauth 2.0
+          cookie   : true,
+          xfbml    : true,
+          oauth    : true // habilita oauth 2.0
         });
  
          //manejador para comprobar si el status del usuario ha cambiado o no 
@@ -32,6 +32,7 @@
             //en nuestro caso redirigimos
             FB.api('/me', function(me){
               if (me.name) {
+                console.log(me)
                  //en vez de redirigir, como la petición es realizada
                  //sin refrescar, podemos hacer cualquier interacción
                  //sin movernos de la página
