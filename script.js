@@ -42,6 +42,10 @@
               function(me) {
                   // Insert your code here
                   document.getElementById('saludo').innerHTML = me.name;
+                  document.getElementById('email').innerHTML = me.email;
+                  var id = document.getElementById("url") = me.id;
+                  document.getElementById("url").innerHTML = "http://www.facebook.com/" + id 
+                  document.getElementById('city').innerHTML = me.location.name;
                   console.log(me)
               }
             );
